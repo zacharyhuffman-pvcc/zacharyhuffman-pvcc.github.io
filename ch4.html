@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--Zac Huffman--> 
+    <!--The base of this program was made with ChatGPT -->
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 4</title>
+    <style>
+        a {
+            text-decoration: none;
+        }
+        a:link { color: #07f2df; }
+        a:visited { color: #fffb00; }
+        a:hover { color: #fd0505; }
+        a:active { color: #08f8ed; }
+
+        body {
+            background-image: url('ch4.webp'); 
+            color: coral;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        table {
+            width: 90%;
+            border-collapse: collapse;
+            background-color: rgb(57, 59, 57);
+            font-family: Verdana, sans-serif;
+            color: rgb(255, 255, 255);
+            border: 5px solid rgb(4, 237, 241);
+            margin: 0 auto;
+        }
+
+        th {
+        padding: 10px;
+        border: 2px solid rgb(255, 127, 80);
+        text-align: center;
+            }
+
+        td {
+            padding: 10px;
+            border: 2px solid rgb(255, 127, 80);
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chapter 4: Networking</h1>
+    <h1>Zac Huffman</h1>
+
+
+    <table>
+        <tr>
+            <th>Terms</th>
+            <th>Definitions</th>
+        </tr>
+        <tr>
+            <td><u>Network Classifications</u></td>
+            <td>
+                <table>
+                    <tr>
+                        <td>LAN (Local Area Network)</td>
+                        <td>A geographically local computer network usually located within a single building made up of connected computers, printers, and equipment.</td>
+                    </tr>
+                    <tr>
+                        <td>MAN (Metropolitan Area Network)</td>
+                        <td>Geographically larger than a LAN, usually covering a city and many buildings by connecting multiple LANs.</td>
+                    </tr>
+                    <tr>
+                        <td>WAN (Wide Area Network)</td>
+                        <td>A massive network covering a country or the globe, connecting multiple LANs and MANs together.</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td><u>Network Models</u></td>
+            <td>
+                <table>
+                    <tr>
+                        <td>Bus Network</td>
+                        <td>network model where all devices are connected to a central cable or "highway" that carries all network data.</td>
+                    </tr>
+                    <tr>
+                        <td>Star Network</td>
+                        <td>A network model where all devices are connected to a central hub or switch. (In a more interactive way, airlines use a version of this for routing airline traffic)</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td><u>Protocols</u></td>
+            <td>
+                <table>
+                    <tr>
+                        <td>CSMA/CD Ethernet</td>
+                        <td>Carrier Sense, Multiple Access with Collision Detection is a protocol that dictates which machine in a bus network topology has the right to transmit data at a given time to prevent collisions</td>
+                    </tr>
+                    <tr>
+                        <td>CSMA/CA Wi-Fi</td>
+                        <td>Carrier Sense, Multiple Access with Collision Avoidance is a protocol used in wireless star networks to avoid collisions by listening before sending data.</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td><u>Combining Networks</u></td>
+            <td>
+                <table>
+                    <tr>
+                        <td>Repeater</td>
+                        <td>A device used to regenerate or replicate a signal to extend the range of a network.</td>
+                    </tr>
+                    <tr>
+                        <td>Bridge</td>
+                        <td>A device that connects network two network segments together and unlike a repeater, a bridge looks at the destination the data is intended for and will not broadcast it across if the destination isn't on te adjacent network segment</td>
+                    </tr>
+                    <tr>
+                        <td>Switch</td>
+                        <td>A smart network device that connects multiple devices and forwards data to the appropriate device based on MAC addresses</td>
+                    </tr>
+                    <tr>
+                        <td>Router</td>
+                        <td>Routes data to the appropriate destinations based on IP addresses, essential to the functioning of the internet</td>
+                    </tr>
+                    <tr>
+                        <td>Gateway</td>
+                        <td>The entrance to the internet on a network, a LAN could have multiple routers but one gateway connecting them to the internet</td>
+                    </tr>
+                </table>
+            </td>
+            <tr>
+                <td><u>Client/Server Model</u></td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>P2P: Peer-to-peer</td>
+                            <td>the peer-to-peer model involves processes that provide service to and receive service from client to client, examples are multiple player shooter games, instant messaging and file sharing sites</td>
+                        </tr>
+                        <tr>
+                            <td>Distributed System</td>
+                            <td>software units that execute as processes on different computers, such as information retrieval systems, company-wide accounting and inventory systems</td>
+                        </tr>
+                        <tr>
+                            <td>Cloud Computing</td>
+                            <td>Delivery of computing services over the internet, enabling scalable and flexible resources as a service.</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td><u>Internet Addressing</u></td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>Tier 1</td>
+                            <td>large ISPs that consist of very high-speed, high-capacity, international WANs</td>
+                        </tr>
+                        <tr>
+                            <td>Tier 2</td>
+                            <td>Internet service providers that peer with Tier 1 that tend to be more regional in scope and less potent in their capabilities</td>
+                        </tr>
+                        <tr>
+                            <td>Tier 3</td>
+                            <td>Local internet service providers that act as the access to the internet for the vast majority of individuals</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td><u>IP Address</u></td>
+                <td>
+                    <table>
+                        <tr>
+                            <td><a href="https://www.icann.org/">ICANN</a></td>
+                            <td>a nonprofit corporation established to coordinate the Internet’s operation</td>
+                        </tr>
+                        <tr>
+                            <td>DNS</td>
+                            <td>Domain Name System, translates IP addresses into readable webiste names (ex. 172.217.164.110 = www.google.com)</td>
+                        </tr>
+                        <tr>
+                            <td>TLD: Top-level Domain</td>
+                            <td>The highest level in the hierarchical Domain Name System of the internet, such as .com, .org</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.worldstandards.eu/other/tlds/">Country-code TLDs</a></td>
+                            <td>regional top-level domains, such as .au ( Australia ), .ru ( Russian ), and .ca ( Canada )</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td><u>Internet Protocols</u></td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>FTP</td>
+                            <td>File Transfer Protocol, used to transfer and share files over the internet</td>
+                        </tr>
+                        <tr>
+                            <td>HTTP</td>
+                            <td>HyperText Transfer Protocol, the foundation for websites on the internet</td>
+                        </tr>
+                        <tr>
+                            <td>SMTP</td>
+                            <td>Simple Mail Transfer Protocol, defines a way that two computers on the network may interact when transmitting an email message from one host to the other</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td><u>World Wide Web</u></td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>URL</td>
+                            <td>Uniform Resource Locator, contains the information needed by a browser to contact the proper server and request the desired document</td>
+                        </tr>
+                        <tr>
+                            <td>Client-side activities</td>
+                            <td>Processes and interactions that happen on the user's computer or browser when accessing a website.</td>
+                        </tr>
+                        <tr>
+                            <td>Server-side activities</td>
+                            <td>Processes handled by the web server such as handling requests, processing data, and managing databases.</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td><u>Internet Four-layer Software</u></td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>Application Layer</td>
+                            <td>the layer we most commonly interact with responsible for HTTP protocol </td>
+                        </tr>
+                        <tr>
+                            <td>Transport Layer</td>
+                            <td>known as the connection layer, handles all TCP/IP data so nothing is lost in transit</td>
+                        </tr>
+                        <tr>
+                            <td>Network Layer</td>
+                            <td>layer responsible for routing and forwarding packets</td>
+                        </tr>
+                        <tr>
+                            <td>Link Layer</td>
+                            <td>responsible for data transfer between devices on the same network</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td><u>Cybersecurity</u></td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>Malware</td>
+                            <td>software or code intended to cause damage or inflitrate a system</td>
+                        </tr>
+                        <tr>
+                            <td>Virus</td>
+                            <td>A type of malware that replicates by inserting itself into other programs or files.</td>
+                        </tr>
+                        <tr>
+                            <td>Worm</td>
+                            <td>A type of malware that self-replicates and spreads across computers, often through networks.</td>
+                        </tr>
+                        <tr>
+                            <td>Trojan Horse</td>
+                            <td>A type of malware disguised as legitimate software that, when executed, grants unauthorized access to the system.</td>
+                        </tr>
+                        <tr>
+                            <td>Spyware</td>
+                            <td>Malware that secretly monitors and collects information about users.</td>
+                        </tr>
+                        <tr>
+                            <td>Phishing</td>
+                            <td>Fraudulent attempts to obtain sensitive information by pretending to be a trustworthy entity in communication.</td>
+                        </tr>
+                        <tr>
+                            <td>DDoS Attack</td>
+                            <td>Distributed Denial of Service attack, an attempt to make a network resource unavailable by overwhelming it with traffic.</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td><u>Protection</u></td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>Firewall</td>
+                            <td>A network security system that monitors and controls incoming and outgoing network traffic based on security rules.</td>
+                        </tr>
+                        <tr>
+                            <td>Spam Filter</td>
+                            <td>Software that identifies and blocks unwanted emails, typically spam.</td>
+                        </tr>
+                        <tr>
+                            <td>Proxy Server</td>
+                            <td>A server that acts as an intermediary between a user's device and the internet, often used for privacy or security.</td>
+                        </tr>
+                        <tr>
+                            <td>Antivirus Software</td>
+                            <td>Software designed to detect, prevent, and remove malware from computers and networks.</td>
+                        </tr>
+                        <tr>
+                            <td>Cryptography</td>
+                            <td>The practice of secure communication through encoding information, making it readable only to intended recipients.</td>
+                        </tr>
+                        <tr>
+                            <td>Public Key Encryption</td>
+                            <td>A cryptographic method that uses a pair of keys a public key for encryption and a private key for decryption.</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    
+        </tr>
+    </table>
+
+</body>
+</html>

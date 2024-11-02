@@ -1,4 +1,4 @@
-# Name: ZAC HUFFMAN
+# Name: your-name-here
 # Prog Purpose: This program finds the cost of movie tickets
 # Price for one ticket: $10.99
 # Sales tax rate: 5.5%
@@ -7,7 +7,7 @@ import datetime
 
 ########### define global variables ###########
 # define tax rate and prices
-SALES_TAX_RATE = .055
+SALES_TAX_RATE = 0.055
 PR_TICKET = 10.99
 
 # define global variables
@@ -18,16 +18,15 @@ total = 0
 
 ########### define program functions ###########
 def main():
-
     more_tickets = True
-    
+
     while more_tickets:
         get_user_data()
         perform_calculations()
         display_results()
 
         yesno = input("\nWould you like to order again (Y or N)? ")
-        if yesno == "N" or yesno == "n":
+        if yesno.lower() == "n":
             more_tickets = False
             print("Thank you for your purchase. Enjoy your movie!")
 
@@ -46,9 +45,9 @@ def display_results():
     print('**** CINEMA HOUSE MOVIES ****')
     print('Your neighborhood movie house')
     print('----------------------------------')
-    print('Tickets        $ ' + format(subtotal, '8,.2f'))
-    print('Sales Tax      $ ' + format(sales_tax, '8,.2f'))
-    print('Total          $ ' + format(total, '8,.2f'))
+    print('Tickets        $ ' + format(subtotal, '8.2f'))
+    print('Sales Tax      $ ' + format(sales_tax, '8.2f'))
+    print('Total          $ ' + format(total, '8.2f'))
     print('----------------------------------')
     print(str(datetime.datetime.now()))
 

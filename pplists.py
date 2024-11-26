@@ -1,4 +1,4 @@
-# Program: [Your Name Here]
+# Program: Zachary Huffman
 # Program Purpose: This program uses lists to find the personal property tax for vehicles
 # in Charlottesville and produces a report which displays all data and the total tax due
 # for six months.
